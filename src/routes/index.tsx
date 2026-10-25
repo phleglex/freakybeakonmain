@@ -207,20 +207,20 @@ function Visit() {
         />
         <div className="space-y-5">
           <p className="text-sm font-semibold tracking-widest text-primary uppercase">Visit Freaky Beakon</p>
-          <h2 className="font-display text-4xl">Pull up a chair, or grab it to go</h2>
+          <h2 className="font-display text-4xl">Order online, or grab it to go</h2>
           <p className="text-muted-foreground">
             Our counter is open seven days a week. Order online and skip the line — we'll text you the moment your
             chicken comes out of the fryer.
           </p>
           <ul className="space-y-3 text-sm">
             <li className="flex gap-3">
-              <MapPin className="size-5 shrink-0 text-primary" /> 412 Magnolia Ave · Free parking out back
+              <MapPin className="size-5 shrink-0 text-primary" /> Peentecost Street 24, Gbawe
             </li>
             <li className="flex gap-3">
-              <Clock className="size-5 shrink-0 text-primary" /> Mon–Thu 11–9 · Fri–Sat 11–11 · Sun 12–8
+              <Clock className="size-5 shrink-0 text-primary" /> Mon–Thu 11am–9pm · Fri–Sat 11pm–10pm · Sun 2pm–8pm
             </li>
             <li className="flex gap-3">
-              <UtensilsCrossed className="size-5 shrink-0 text-primary" /> Catering for 20+ — call (555) 274-2667
+              <UtensilsCrossed className="size-5 shrink-0 text-primary" /> Catering for 20+ — call (+233) 50 783 6795
             </li>
           </ul>
           <Button size="lg" asChild className="rounded-full px-8">
