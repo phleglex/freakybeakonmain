@@ -40,7 +40,7 @@ function Hero() {
           <Badge className="bg-secondary text-secondary-foreground">Fried fresh · Never frozen</Badge>
           <h1 className="font-display text-5xl leading-[1.05] sm:text-7xl">Freaky Beakon Fried Chicken</h1>
           <p className="text-lg opacity-85 sm:text-xl">
-            Hand-breaded, buttermilk-brined, fried to order. Get a bucket ready for pickup in 20 minutes — or
+            Get a bucket ready for pickup in 20 minutes — or
             delivered hot to your door.
           </p>
           <div className="flex flex-wrap gap-3">
