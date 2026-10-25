@@ -144,7 +144,7 @@ export function SiteFooter() {
             loading="lazy"
             className="size-20 rounded-xl bg-white"
           />
-          <p className="text-sm opacity-70">Hand-breaded fried chicken, made to order since 2014.</p>
+          <p className="text-sm opacity-70">Fried chicken, made to order since 2026.</p>
         </div>
         <div className="space-y-1 text-sm">
           <p className="font-semibold">Hours</p>
@@ -154,8 +154,8 @@ export function SiteFooter() {
         </div>
         <div className="space-y-1 text-sm">
           <p className="font-semibold">Find us</p>
-          <p className="opacity-70">412 Magnolia Ave</p>
-          <p className="opacity-70">(555) 274-2667</p>
+          <p className="opacity-70">Pentecost Street 24, Gbawe</p>
+          <p className="opacity-70">+233 50 783 6795</p>
         </div>
       </div>
       <p className="border-t border-background/10 py-4 text-center text-xs opacity-60">
