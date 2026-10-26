@@ -155,7 +155,7 @@ export function SiteFooter() {
         <div className="space-y-1 text-sm">
           <p className="font-semibold">Find us</p>
           <p className="opacity-70">Pentecost Street 24, Gbawe</p>
-          <p className="opacity-70">+233 50 783 6795</p>
+          <p className="opacity-70">+233 20 983 1705</p>
         </div>
       </div>
       <p className="border-t border-background/10 py-4 text-center text-xs opacity-60">
