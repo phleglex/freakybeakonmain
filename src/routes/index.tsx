@@ -217,7 +217,7 @@ function Visit() {
               <MapPin className="size-5 shrink-0 text-primary" /> Pentecost Street 24, Gbawe
             </li>
             <li className="flex gap-3">
-              <Clock className="size-5 shrink-0 text-primary" /> Mon–Thu 11am–9pm · Fri–Sat 11pm–10pm · Sun 2pm–8pm
+              <Clock className="size-5 shrink-0 text-primary" /> Mon–Thu 11am–9pm · Fri–Sat 11am–10pm · Sun 2pm–8pm
             </li>
             <li className="flex gap-3">
               <UtensilsCrossed className="size-5 shrink-0 text-primary" /> Catering for 20+ — call (+233) 20 983 1705
