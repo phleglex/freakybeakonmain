@@ -1,4 +1,3 @@
-
 export type MenuCategory =
   | 'tenders'
   | 'burgers'
@@ -31,7 +30,7 @@ export const categories: Array<{
   { id: 'drinks', label: 'Drinks' },
 ]
 
-export const menuItems: MenuItem[] = [
+export const menu: MenuItem[] = [
   // Tenders
   {
     id: 'tenders',
