@@ -66,7 +66,7 @@ function Highlights() {
   const items = [
     { icon: Clock, title: 'Ready in ~20 min', text: 'Every order is breaded and fried when you place it.' },
     { icon: Truck, title: 'Local delivery', text: `Within 8 km for a flat fee. ${formatPrice(DELIVERY_MINIMUM_CENTS)} minimum.` },
-    { icon: Flame, title: 'Pick your heat', text: 'Southern classic or Nashville hot — your call.' },
+    { icon: Flame, title: 'Pick your heat', text: 'Classic or Nuclear hot — your call.' },
   ]
   return (
     <section className="border-b border-border bg-secondary/40">
@@ -214,13 +214,13 @@ function Visit() {
           </p>
           <ul className="space-y-3 text-sm">
             <li className="flex gap-3">
-              <MapPin className="size-5 shrink-0 text-primary" /> Peentecost Street 24, Gbawe
+              <MapPin className="size-5 shrink-0 text-primary" /> Pentecost Street 24, Gbawe
             </li>
             <li className="flex gap-3">
               <Clock className="size-5 shrink-0 text-primary" /> Mon–Thu 11am–9pm · Fri–Sat 11pm–10pm · Sun 2pm–8pm
             </li>
             <li className="flex gap-3">
-              <UtensilsCrossed className="size-5 shrink-0 text-primary" /> Catering for 20+ — call (+233) 50 783 6795
+              <UtensilsCrossed className="size-5 shrink-0 text-primary" /> Catering for 20+ — call (+233) 20 983 1705
             </li>
           </ul>
           <Button size="lg" asChild className="rounded-full px-8">
