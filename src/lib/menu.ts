@@ -1,4 +1,11 @@
-export type MenuCategory = 'buckets' | 'sandwiches' | 'tenders' | 'plates' | 'sides' | 'drinks'
+
+export type MenuCategory =
+  | 'tenders'
+  | 'burgers'
+  | 'fried-chicken'
+  | 'sauces'
+  | 'sides'
+  | 'drinks'
 
 export type MenuItem = {
   id: string
@@ -7,172 +14,148 @@ export type MenuItem = {
   /** Price in pesewas (1/100 of a Ghana cedi). */
   priceCents: number
   category: MenuCategory
+  /** Product picture path or URL. */
   image?: string
   tags?: Array<'popular' | 'spicy' | 'new'>
 }
 
-export const categories: Array<{ id: MenuCategory; label: string }> = [
-  { id: 'buckets', label: 'Buckets' },
-  { id: 'sandwiches', label: 'Sandwiches' },
-  { id: 'tenders', label: 'Tenders & Wings' },
-  { id: 'plates', label: 'Plates' },
+export const categories: Array<{
+  id: MenuCategory
+  label: string
+}> = [
+  { id: 'tenders', label: 'Tenders' },
+  { id: 'burgers', label: 'Burgers' },
+  { id: 'fried-chicken', label: 'Fried Chicken' },
+  { id: 'sauces', label: 'Dips & Sauces' },
   { id: 'sides', label: 'Sides' },
   { id: 'drinks', label: 'Drinks' },
 ]
 
-export const menu: MenuItem[] = [
+export const menuItems: MenuItem[] = [
+  // Tenders
   {
-    id: 'bucket-8',
-    name: 'Classic 8-Piece Bucket',
-    description: 'Mixed white & dark, buttermilk-brined for 12 hours and hand-breaded. Feeds 3–4.',
-    priceCents: 28000,
-    category: 'buckets',
-    image: 'bucket.png',
-    tags: ['popular'],
+    id: 'tenders',
+    name: 'Tenders',
+    description: 'Golden, crispy chicken tenders. Perfect for dipping.',
+    priceCents: 0, // Replace with actual price
+    category: 'tenders',
+    image: 'tenders', // Add picture path
+    tags: [],
+  },
+
+  // Burgers
+  {
+    id: 'beakon-burger',
+    name: 'Beakon Burger',
+    description: 'A classic crispy chicken burger.',
+    priceCents: 0,
+    category: 'burgers',
+    image: 'burger',
+    tags: [],
   },
   {
-    id: 'bucket-12',
-    name: 'Family Feast 12-Piece',
-    description: '12 pieces, 3 large sides and 6 honey-butter biscuits. Feeds 5–6.',
-    priceCents: 48000,
-    category: 'buckets',
-    image: 'bucket.png',
-  },
-  {
-    id: 'bucket-hot-8',
-    name: 'Nashville Hot 8-Piece',
-    description: 'Our classic bucket dunked in cayenne-chili oil. Pickles on the side to cool off.',
-    priceCents: 30000,
-    category: 'buckets',
-    image: 'hot.png',
+    id: 'nuclear-beakon-burger',
+    name: 'Nuclear Beakon Burger',
+    description: 'A fiery chicken burger for heat seekers.',
+    priceCents: 0,
+    category: 'burgers',
+    image: 'nuclear_burger',
     tags: ['spicy'],
   },
+
+  // Fried Chicken
   {
-    id: 'sando-classic',
-    name: 'The Beakon Sandwich',
-    description: 'Crispy thigh, brioche bun, dill pickles, slaw and house comeback sauce.',
-    priceCents: 9500,
-    category: 'sandwiches',
-    image: 'sandwich.png',
-    tags: ['popular'],
+    id: 'thighs',
+    name: 'Thighs',
+    description: 'Crispy, juicy fried chicken thighs.',
+    priceCents: 0,
+    category: 'fried-chicken',
+    image: 'thighs',
+    tags: [],
   },
   {
-    id: 'sando-hot',
-    name: 'Hot Chick Sandwich',
-    description: 'Nashville hot thigh, pickles, slaw and cooling ranch on toasted brioche.',
-    priceCents: 10500,
-    category: 'sandwiches',
-    image: 'hot.png',
+    id: 'nuclear-thighs',
+    name: 'Nuclear Thighs',
+    description: 'Crispy fried chicken thighs with a spicy kick.',
+    priceCents: 0,
+    category: 'fried-chicken',
+    image: 'nuclear_thighs',
     tags: ['spicy'],
   },
+
+  // Dips & Sauces
   {
-    id: 'sando-honey',
-    name: 'Hot Honey Biscuit',
-    description: 'Fried tender on a fresh buttermilk biscuit with chili-infused honey.',
-    priceCents: 7500,
-    category: 'sandwiches',
-    image: 'sides.png',
-    tags: ['new'],
+    id: 'yellow-sauce',
+    name: 'Yellow Sauce',
+    description: 'Our signature yellow dipping sauce.',
+    priceCents: 0,
+    category: 'sauces',
+    image: 'yellow_sauce',
+    tags: [],
   },
   {
-    id: 'tenders-5',
-    name: '5 Buttermilk Tenders',
-    description: 'Hand-cut breast tenders with your choice of honey mustard or comeback sauce.',
-    priceCents: 10000,
-    category: 'tenders',
-    image: 'tenders.png',
-    tags: ['popular'],
+    id: 'bomb-sauce',
+    name: 'Bomb Sauce',
+    description: 'Our signature Bomb Sauce.',
+    priceCents: 0,
+    category: 'sauces',
+    image: 'bomb_sauce',
+    tags: [],
   },
   {
-    id: 'wings-10',
-    name: '10 Honey Garlic Wings',
-    description: 'Crackly fried wings tossed in honey garlic glaze and toasted sesame.',
-    priceCents: 12000,
-    category: 'tenders',
-    image: 'wings.png',
+    id: 'honey-sauce',
+    name: 'Honey Sauce',
+    description: 'A sweet honey dipping sauce.',
+    priceCents: 0,
+    category: 'sauces',
+    image: 'honey_sauce',
+    tags: [],
   },
+
+  // Sides
   {
-    id: 'wings-hot-10',
-    name: '10 Nashville Hot Wings',
-    description: 'Same crunch, a lot more heat. Served with ranch.',
-    priceCents: 12000,
-    category: 'tenders',
-    image: 'hot.png',
-    tags: ['spicy'],
-  },
-  {
-    id: 'plate-2pc',
-    name: '2-Piece Plate',
-    description: 'A breast and a thigh with two regular sides and a biscuit.',
-    priceCents: 11000,
-    category: 'plates',
-    image: 'bucket.png',
-  },
-  {
-    id: 'plate-tender',
-    name: 'Tender Plate',
-    description: '3 tenders, two regular sides, a biscuit and a dipping sauce.',
-    priceCents: 11500,
-    category: 'plates',
-    image: 'tenders.png',
-  },
-  {
-    id: 'side-mac',
-    name: 'Skillet Mac & Cheese',
-    description: 'Three-cheese, baked until the edges go golden.',
-    priceCents: 4500,
+    id: 'coleslaw',
+    name: 'Coleslaw',
+    description: 'A cool, crunchy side.',
+    priceCents: 0,
     category: 'sides',
-    image: 'sides.png',
-    tags: ['popular'],
+    image: 'coleslaw',
+    tags: [],
   },
+
+  // Drinks
   {
-    id: 'side-biscuits',
-    name: 'Honey-Butter Biscuits (3)',
-    description: 'Flaky buttermilk biscuits brushed with whipped honey butter.',
-    priceCents: 4000,
-    category: 'sides',
-    image: 'sides.png',
-  },
-  {
-    id: 'side-slaw',
-    name: 'Creamy Coleslaw',
-    description: 'Crisp cabbage, carrot and a tangy buttermilk dressing.',
-    priceCents: 3000,
-    category: 'sides',
-  },
-  {
-    id: 'side-fries',
-    name: 'Seasoned Fries',
-    description: 'Skin-on fries dusted with our secret Beakon seasoning.',
-    priceCents: 3500,
-    category: 'sides',
-  },
-  {
-    id: 'drink-tea',
-    name: 'Sweet Tea',
-    description: 'Fresh-brewed every morning. Large, over ice.',
-    priceCents: 2500,
+    id: 'yoghurt',
+    name: 'Yoghurt',
+    description: 'Chilled yoghurt.',
+    priceCents: 0,
     category: 'drinks',
+    image: 'yoghurt',
+    tags: [],
   },
   {
-    id: 'drink-lemonade',
-    name: 'Fresh Lemonade',
-    description: 'Hand-squeezed with a little cane sugar.',
-    priceCents: 3000,
+    id: 'coca-cola',
+    name: 'Coca-Cola',
+    description: 'Chilled Coca-Cola.',
+    priceCents: 0,
     category: 'drinks',
+    image: 'coke',
+    tags: [],
   },
   {
-    id: 'drink-soda',
-    name: 'Fountain Soda',
-    description: 'Coke, Diet Coke, Sprite or Dr Pepper.',
-    priceCents: 2000,
+    id: 'diet-coke',
+    name: 'Diet Coke',
+    description: 'Chilled Diet Coke.',
+    priceCents: 0,
     category: 'drinks',
+    image: 'diet_coke',
+    tags: [],
   },
 ]
 
 export const menuById = new Map(menu.map((item) => [item.id, item]))
 
-export const TAX_RATE = 0.08
+export const TAX_RATE = 0.00
 export const DELIVERY_FEE_CENTS = 1500
 export const DELIVERY_MINIMUM_CENTS = 1500
 export const CURRENCY = 'GHS'
