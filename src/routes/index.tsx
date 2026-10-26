@@ -27,8 +27,8 @@ function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-foreground text-background">
       <img
-        src={imageUrl('hero.png', 1600)}
-        srcSet={`${imageUrl('hero.png', 800)} 800w, ${imageUrl('hero.png', 1600)} 1600w`}
+        src={imageUrl('home.jpg', 1600)}
+        srcSet={`${imageUrl('home.jpg', 800)} 800w, ${imageUrl('home.jpg', 1600)} 1600w`}
         sizes="100vw"
         alt="A tray of golden fried chicken with honey, pickles and hot sauce"
         className="absolute inset-0 -z-10 size-full object-cover object-right opacity-90"
