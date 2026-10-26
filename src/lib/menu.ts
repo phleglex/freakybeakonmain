@@ -173,8 +173,8 @@ export const menu: MenuItem[] = [
 export const menuById = new Map(menu.map((item) => [item.id, item]))
 
 export const TAX_RATE = 0.08
-export const DELIVERY_FEE_CENTS = 3000
-export const DELIVERY_MINIMUM_CENTS = 15000
+export const DELIVERY_FEE_CENTS = 1500
+export const DELIVERY_MINIMUM_CENTS = 1500
 export const CURRENCY = 'GHS'
 
 const cedis = new Intl.NumberFormat('en-GH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
