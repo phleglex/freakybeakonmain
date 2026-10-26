@@ -1,10 +1,4 @@
-export type MenuCategory =
-  | 'tenders'
-  | 'burgers'
-  | 'fried-chicken'
-  | 'sauces'
-  | 'sides'
-  | 'drinks'
+export type MenuCategory = 'tenders' | 'burgers' | 'fried-chicken' | 'sauces' | 'sides' | 'drinks'
 
 export type MenuItem = {
   id: string
@@ -154,23 +148,25 @@ export const menu: MenuItem[] = [
 
 export const menuById = new Map(menu.map((item) => [item.id, item]))
 
-export const TAX_RATE = 0.00
-export const DELIVERY_FEE_CENTS = 1500
+export const TAX_RATE = 0.0
 export const DELIVERY_MINIMUM_CENTS = 1500
 export const CURRENCY = 'GHS'
 
-const cedis = new Intl.NumberFormat('en-GH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+const cedis = new Intl.NumberFormat('en-GH', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+})
 
 export function formatPrice(cents: number) {
   return `GH₵${cedis.format(cents / 100)}`
-}
 
+  
 export function imageUrl(file: string, width: number) {
   return `/.netlify/images?url=/img/${file}&w=${width}&fm=webp`
 }
 
-export function calculateTotals(subtotalCents: number, fulfillment: 'pickup' | 'delivery') {
-  const deliveryFeeCents = fulfillment === 'delivery' ? DELIVERY_FEE_CENTS : 0
+export function calculateTotals(subtotalCents: number, fulfillment: 'pickup' | 'delivery', quotedDeliveryFeeCents = 0) {
+  const deliveryFeeCents = fulfillment === 'delivery' ? quotedDeliveryFeeCents : 0
   const taxCents = Math.round(subtotalCents * TAX_RATE)
   return {
     subtotalCents,
